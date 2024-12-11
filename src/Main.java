@@ -1,3 +1,4 @@
+//M03-UF2
 //Ejercicio 1 About Me
 //Claudia Hernandez Colomer
 //Fp DAW La Salle
@@ -5,13 +6,15 @@
 //diciembre 2024
 
 //Empiezo así para poder usar clases y métodos
-public class HCCMain {
+public class Main {
+    //métodoo principal main
     public static void main(String[] args) {
-        HCCMain programa = new HCCMain();
+        Main programa = new Main();
         programa.inicio();
     }
 
+    //métodoo que llama al main. Aqui va lo que iría en el Main. Cambio necesario para poder usar programacion modular
     public void inicio(){
-        //Aqui va lo de Main (HCCMain (Hernandez Colomer Claudia Main) en este caso luego del refactor)
+
     }
 }
