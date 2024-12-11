@@ -1,3 +1,10 @@
+//M03-UF2
+//Ejercicio 1 About Me
+//Claudia Hernandez Colomer
+//Fp DAW La Salle
+//Profesora Marta Bella
+//diciembre 2024
+
 /*
 Tarea 1 – Clase Perfil
 Define la clase Perfil con las siguientes características:
@@ -8,32 +15,42 @@ Define la clase Perfil con las siguientes características:
 • funFacts: Colección de datos curiosos.
 */
 
-import java.util.Random;
+import java.util.ArrayList;
 
 // Atributos (los atributos de una clase deben ser de prefrerencia privados)
 public class Perfil {
     //Strings simples
     private String name;
     private String story;
-    //Arrays de tipo Strings
-    private String[] hobbies;
-    private String[] foods;
-    private String[] funFacts;
+    //Arrays List de tipo Strings
+    private ArrayList<String> hobbies;
+    private ArrayList<String> foods;
+    private ArrayList<String> funFacts;
 
 
     // Constructor de una persona aburrida.
     //Esto me lo estoy inventando aparte de la orden del ejercicio, pensé que puede haber gente que no tenga hobbies, ni comidas favoritas, ni nada que contar... o les de pereza
     public Perfil(String name) {
         this.name = name;
+
         // Valores predeterminados
-        this.story = new String ("Estoy muy Poff para escribir");
-        this.hobbies = new String[] {"No tengo hobbies", "La pereza me puede como para buscarme un hobbie"};
-        this.foods = new String[] {"No tengo comida favorita", "Como cualquier cosa"};
-        this.funFacts = new String[] {"No tengo nada que contar", "¿La vida tiene cosas interesantes?"};
+        this.story = ("Estoy muy Poff para escribir");
+
+        this.hobbies = new ArrayList<>();
+        this.hobbies.add ("No tengo hobbies");
+        this.hobbies.add ("La pereza me puede como para buscarme un hobbie");
+
+        this.foods = new ArrayList<>();
+        this.foods.add ("No tengo comida favorita");
+        this.foods.add ("Como cualquier cosa");
+
+        this.funFacts = new ArrayList<>();
+        this.funFacts.add ("No tengo nada que contar");
+        this.funFacts.add ("¿La vida tiene cosas interesantes?");
     }
 
     // Constructor
-    public Perfil(String name, String story, String[] hobbies, String[] foods, String[] funFacts) {
+    public Perfil(String name, String story, ArrayList<String> hobbies, ArrayList<String> foods, ArrayList<String> funFacts) {
         this.name = name;
         this.story = story;
         this.hobbies = hobbies;
@@ -45,24 +62,24 @@ public class Perfil {
 La clase deberá tener métodos para acceder a estos atributos
  */
 
-    // Geetter method == read method. Cuando un métodoo permite obtener el valor de un atributo privado (apunte de clase)
-    public String getName() {
-        return name;
+    // Geetter method == read method. Cuando un métodoo permite obtener el valor de un atributo privado. Lee y devuelve (apunte de clase)
+    public void printName() {
+        System.out.println(name);
     }
 
     public String getStory() {
         return story;
     }
 
-    public String[] getHobbies() {
+    public ArrayList<String> getHobbies() {
         return hobbies;
     }
 
-    public String[] getFoods() {
+    public ArrayList<String> getFoods() {
         return foods;
     }
 
-    public String[] getFunFacts() {
+    public ArrayList<String> getFunFacts() {
         return funFacts;
     }
 
@@ -79,12 +96,18 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      */
     public String formatearHobbies() {
-        String formateado = "Hobbies: ";
+        String result = "Hobbies: ";
         for (String hobby : hobbies) {
-            formateado += hobby + " ";
+            result += hobby + " ";
         }
-        return formateado;
+        return result;
     }
+
+    /*
+    public String formatearHobbies() {
+        return "Hobbies: " + String.join(", ", hobbies);
+    }
+     */
 
     /** Métod formatear foods
      * La variable formateado es para agregar la palabra Foods: al inicio y guardar el contenido del array en un solo String
@@ -93,12 +116,18 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * Se nota que es tres cuartos de lo mismo del anterior
      */
     public String formatearFoods() {
-        String formateado = "Foods: ";
+        String result = "Foods: ";
         for (String food : foods) {
-            formateado += food + " ";
+            result += food + " ";
         }
-        return formateado;
+        return result;
     }
+
+    /*
+    public String formatearFoods() {
+        return "Foods: " + String.join(", ", foods);
+    }
+     */
 
     /** Métod formatear funFacts
      * La variable formateado es para agregar la palabra Foods: al inicio y guardar el contenido del array en un solo String
@@ -107,14 +136,18 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * Más de lo mismo
      */
     public String formatearFunFacts() {
-        String formateado = "Fun Facts: ";
+        String result = "Fun Facts: ";
         for (String funFact : funFacts) {
-            formateado += funFact + " ";
+            result += funFact + " ";
         }
-        return formateado;
+        return result;
     }
 
-
+    /*
+    public String formatearFunFacts() {
+        return "Fun Facts: " + String.join(", ", funFacts);
+    }
+     */
 }
 
 
