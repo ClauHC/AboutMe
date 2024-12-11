@@ -10,8 +10,8 @@ La clase deberá tener métodos para acceder a estos atributos y métodos que de
 de manera formateada para que sea fácil de mostrar por consola la información
  */
 
+// Atributos (los atributos de una clase deben ser de prefrerencia privados)
 public class Perfil {
-    // Los atributos de una clase deben ser de prefrerencia privados
     //Strings simples
     private String name;
     private String story;
@@ -19,4 +19,15 @@ public class Perfil {
     private String[] hobbies;
     private String[] foods;
     private String[] funFacts;
+
+    // Constructor
+    public Perfil(String name, String story, String[] hobbies, String[] foods, String[] funFacts) {
+        this.name = name;
+        this.story = story;
+        this.hobbies = hobbies;
+        this.foods = foods;
+        this.funFacts = funFacts;
+    }
 }
+
+
