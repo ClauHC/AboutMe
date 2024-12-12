@@ -63,12 +63,13 @@ La clase deberá tener métodos para acceder a estos atributos
  */
 
     // Geetter method == read method. Cuando un métodoo permite obtener el valor de un atributo privado. Lee y devuelve (apunte de clase)
+    // Modificados para que impriman por pantalla en lugar de hacer return
     public void printName() {
-        System.out.println(name);
+        System.out.println("Nombre: " + name);
     }
 
     public void printStory() {
-        System.out.println(story);
+        System.out.println("Sobre mi : " + story);
     }
 
 /*
@@ -84,18 +85,12 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      */
     public void formatearHobbies() {
-        String result = "Hobbies: ";
+        String result = "Mis hobbies son: ";
         for (String hobby : hobbies) {
-            result += hobby + " ";
+            result += hobby + " \n";
         }
         System.out.println(result);
     }
-
-    /*
-    public String formatearHobbies() {
-        return "Hobbies: " + String.join(", ", hobbies);
-    }
-     */
 
     /** Métod formatear foods
      * La variable formateado es para agregar la palabra Foods: al inicio y guardar el contenido del array en un solo String
@@ -104,18 +99,12 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * Se nota que es tres cuartos de lo mismo del anterior
      */
     public void formatearFoods() {
-        String result = "Foods: ";
+        String result = "Mis comidas favoritas son: ";
         for (String food : foods) {
-            result += food + " ";
+            result += food + " \n";
         }
         System.out.println(result);
     }
-
-    /*
-    public String formatearFoods() {
-        return "Foods: " + String.join(", ", foods);
-    }
-     */
 
     /** Métod formatear funFacts
      * La variable formateado es para agregar la palabra Foods: al inicio y guardar el contenido del array en un solo String
@@ -124,18 +113,13 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * Más de lo mismo
      */
     public void formatearFunFacts() {
-        String result = "Fun Facts: ";
+        String result = "Te cuento algunas cosas curiosas: ";
         for (String funFact : funFacts) {
-            result += funFact + " ";
+            result += funFact + " \n";
         }
         System.out.println(result);
     }
 
-    /*
-    public String formatearFunFacts() {
-        return "Fun Facts: " + String.join(", ", funFacts);
-    }
-     */
 }
 
 
