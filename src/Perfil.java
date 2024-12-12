@@ -19,8 +19,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-// Atributos (los atributos de una clase deben ser de prefrerencia privados)
+// Clase Perfil
 public class Perfil {
+
+    //Atributos (los atributos de una clase deben ser de prefrerencia privados)
     //Strings simples
     private String name;
     private String story;
