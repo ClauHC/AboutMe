@@ -25,11 +25,13 @@ public class Main {
         // Objeto Perfil persona aburrida
         Perfil Perfil1 = new Perfil (name1);
         Perfil1.printName();
+        Perfil1.printStory();
+        Perfil1.formatearHobbies();
 
 
         // Información de mi perfil
         String name2 = "Claudia";
-        String story = "Soy Diseñadora de Comunicación Visual y estudiante de DAW 🌟";
+        String story = "💾🎨 Soy Diseñadora de Comunicación Visual y estudiante de DAW";
 
         String hobbie1 = "📚 Leer. Especialmente fantasía y ciencia ficción";
         String hobbie2 = "🎨 Dibujar, soy graduada de arte y gráfico así que dibujo todo el tiempo";
@@ -40,18 +42,18 @@ public class Main {
         hobbies.add(hobbie2);
         hobbies.add(hobbie3);
 
-        String food1 = " Barbacoa, especialmente costillas y mazorcas";
-        String food2 = "la comida criolla cubana";
-        String food3 = "🍣 Me encanta el Sushi";
+        String food1 = "🍖🌽🥔 Barbacoa, todo lo que se haga a las brazas";
+        String food2 = "╰(*°▽°*)╯ la comida criolla cubana";
+        String food3 = "🍣 Me encanta el Sushi, el Ramen y los Dumplins";
 
         ArrayList<String> foods = new ArrayList<>();
         hobbies.add(food1);
         hobbies.add(food2);
         hobbies.add(food3);
 
-        String funFact1 = "Jorge Martin nombró a Brandon Sanderson como su heredero para que continue su obra si el muere y es el único al que ha contado el final de Juego de Tronos.";
-        String funFact2 = "Un pollito y un huevo pueden ser la causa del primer Hellow World de la historia.";
-        String funFact3 = "🍣 Me encanta el Sushi";
+        String funFact1 = "📚 Jorge Martin nombró a Brandon Sanderson como su heredero para que continue su obra si el muere y es el único al que ha contado el final de Juego de Tronos.";
+        String funFact2 = "🐣 Un pollito y un huevo pueden ser la causa del primer Hellow World de la historia.";
+        String funFact3 = "😈 Después de muchos años de especulación Ryan Reynolds dejó escapar por accidente que fué el quien filtró las tomas de Deadpool que volvieron locos a los fans e hicieron imposible que cancelaran la película";
 
         ArrayList<String> funFacts = new ArrayList<>();
         hobbies.add(funFact1);
@@ -62,5 +64,7 @@ public class Main {
         // Objeto Perfil yo
         Perfil Perfil2 = new Perfil (name2, story, hobbies, foods, funFacts);
         Perfil2.printName();
+        Perfil2.printStory();
+        Perfil2.formatearHobbies();
     }
 }

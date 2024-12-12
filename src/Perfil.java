@@ -67,20 +67,8 @@ La clase deberá tener métodos para acceder a estos atributos
         System.out.println(name);
     }
 
-    public String getStory() {
-        return story;
-    }
-
-    public ArrayList<String> getHobbies() {
-        return hobbies;
-    }
-
-    public ArrayList<String> getFoods() {
-        return foods;
-    }
-
-    public ArrayList<String> getFunFacts() {
-        return funFacts;
+    public void printStory() {
+        System.out.println(story);
     }
 
 /*
@@ -95,12 +83,12 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * se usa un for each para recorrer el array completo
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      */
-    public String formatearHobbies() {
+    public void formatearHobbies() {
         String result = "Hobbies: ";
         for (String hobby : hobbies) {
             result += hobby + " ";
         }
-        return result;
+        System.out.println(result);
     }
 
     /*
@@ -115,12 +103,12 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      * Se nota que es tres cuartos de lo mismo del anterior
      */
-    public String formatearFoods() {
+    public void formatearFoods() {
         String result = "Foods: ";
         for (String food : foods) {
             result += food + " ";
         }
-        return result;
+        System.out.println(result);
     }
 
     /*
@@ -135,12 +123,12 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      * Más de lo mismo
      */
-    public String formatearFunFacts() {
+    public void formatearFunFacts() {
         String result = "Fun Facts: ";
         for (String funFact : funFacts) {
             result += funFact + " ";
         }
-        return result;
+        System.out.println(result);
     }
 
     /*
