@@ -5,6 +5,11 @@
 //Profesora Marta Bella
 //diciembre 2024
 
+/*
+Como hice la opción de constructor para una persona aburrida quería hacer un métod de un menú para elejir que perfil de usuario se quiere ver, pero creo que no me da tiempo
+así que lo dejo como idea para practicar más adelante
+ */
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,28 +17,27 @@ import java.util.Scanner;
 
 public class Main {
 
-    //métodoo principal main
+    /**Métod principal Main
+     * se hace una llamada al nétod inicio para correr el programa
+     * @param args
+     */
     public static void main(String[] args) {
         Main programa = new Main();
         programa.inicio();
     }
 
-    //métodoo que llama al main. Aqui va lo que iría en el Main. Cambio necesario para poder usar programacion modular
+    /**Metdo inicio
+     * métodoo que se llama en el main. Aqui va lo que iría en el Main normalmente. Cambio necesario para poder usar programacion modular.
+     * No necesita parametros de entrada
+     */
     public void inicio(){
 
-        /*
         // Persona aburrida
         String name1 = "Lily";
 
         // Objeto Perfil persona aburrida
-        Perfil Perfil1 = new Perfil (name1);
-        Perfil1.printName();
-        Perfil1.printStory();
-        Perfil1.formatearHobbies();
-        Perfil1.formatearFoods();
-        //Perfil1.formatearFunFacts();
-        Perfil1.randomFunFacts();
-        */
+        Perfil perfil1 = new Perfil (name1);
+
 
         // Información de mi perfil
         String name2 = "Claudia";
@@ -66,25 +70,31 @@ public class Main {
         funFacts.add(funFact2);
         funFacts.add(funFact3);
 
-
         // Objeto Perfil yo
-        Perfil Perfil2 = new Perfil (name2, story, hobbies, foods, funFacts);
-        /*
-        Perfil2.printName();
-        Perfil2.printStory();
-        Perfil2.formatearHobbies();
-        Perfil2.formatearFoods();
-        //Perfil2.formatearFunFacts();
-        Perfil2.randomFunFacts();
-         */
+        Perfil perfil2 = new Perfil (name2, story, hobbies, foods, funFacts);
 
+        /*
+        //Llamar al menú del perfil1
+        menuAboutMe(perfil1);
+        */
+
+        //Llamar al menú del perfil2
+        menuAboutMe(perfil2);
+    }
+
+    /**Metod del menú
+     * Se pasa el menú a un métod para que sea más fácil llamarlo, usarlo y actualizarlo.
+     * Antes había que entrarle directamente al menú el perfil que debía usar ahora se le entra en la llamada desde inicio el parámetro del perfil
+     * @param perfil indica que perfil queremos llamar
+     */
+    public void menuAboutMe (Perfil perfil) {
         //Menú de opciones
         Scanner scanner = new Scanner(System.in);
         int numMenu;
 
         do {
             // Mostrar el menú
-            System.out.println("\nMenu About Me " + Perfil2.getName());
+            System.out.println("\nMenu About Me " + perfil.getName());
             System.out.println("[1] Story.");
             System.out.println("[2] Favorites");
             System.out.println("[3] Fun Fact");
@@ -100,14 +110,14 @@ public class Main {
             // Procesar la opción seleccionada
             switch (numMenu) {
                 case 1:
-                    Perfil2.printStory();
+                    perfil.printStory();
                     break;
                 case 2:
-                    Perfil2.formatearHobbies();
-                    Perfil2.formatearFoods();
+                    perfil.formatearHobbies();
+                    perfil.formatearFoods();
                     break;
                 case 3:
-                    System.out.println("Dato curioso: " + Perfil2.randomFunFacts());
+                    System.out.println("Dato curioso: " + perfil.randomFunFacts());
                     break;
                 case 4:
                     System.out.println("¡Gracias por usar About Me! Hasta pronto.");
@@ -116,7 +126,5 @@ public class Main {
                     System.out.println("Opción no válida. Intenta de nuevo.");
             }
         } while (numMenu != 4);
-
-        scanner.close();
     }
 }
