@@ -27,6 +27,9 @@ public class Main {
         Perfil1.printName();
         Perfil1.printStory();
         Perfil1.formatearHobbies();
+        Perfil1.formatearFoods();
+        //Perfil1.formatearFunFacts();
+        Perfil1.randomFunFacts();
 
 
         // Información de mi perfil
@@ -34,7 +37,7 @@ public class Main {
         String story = "💾🎨 Soy Diseñadora de Comunicación Visual y estudiante de DAW.";
 
         String hobbie1 = "📚 Leer. Especialmente fantasía y ciencia ficción.";
-        String hobbie2 = "🎨 Dibujar, soy graduada de arte y gráfico así que dibujo todo el tiempo.";
+        String hobbie2 = "💍 Hago joyería, he estudiado y trabajado la orfebrería, en mis ratos libres hago joyería cada vez que encuentro el momento";
         String hobbie3 = "🎮 Jugar videojuegos, me gustan los RPG de plataforma abierta (unque casi nunca tengo tiempo 😭).";
 
         ArrayList<String> hobbies = new ArrayList<>();
@@ -66,5 +69,8 @@ public class Main {
         Perfil2.printName();
         Perfil2.printStory();
         Perfil2.formatearHobbies();
+        Perfil2.formatearFoods();
+        //Perfil2.formatearFunFacts();
+        Perfil2.randomFunFacts();
     }
 }

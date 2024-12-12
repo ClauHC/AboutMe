@@ -16,6 +16,8 @@ Define la clase Perfil con las siguientes características:
 */
 
 import java.util.ArrayList;
+import java.util.Random;
+
 
 // Atributos (los atributos de una clase deben ser de prefrerencia privados)
 public class Perfil {
@@ -65,11 +67,11 @@ La clase deberá tener métodos para acceder a estos atributos
     // Geetter method == read method. Cuando un métodoo permite obtener el valor de un atributo privado. Lee y devuelve (apunte de clase)
     // Modificados para que impriman por pantalla en lugar de hacer return
     public void printName() {
-        System.out.println("Nombre: " + name);
+        System.out.println("Nombre: " + name + "\n");
     }
 
     public void printStory() {
-        System.out.println("Sobre mi : " + story);
+        System.out.println("Sobre mi : " + story + "\n");
     }
 
 /*
@@ -85,9 +87,9 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      */
     public void formatearHobbies() {
-        String result = "Mis hobbies son: ";
+        String result = "Mis hobbies son:\n";
         for (String hobby : hobbies) {
-            result += hobby + " \n";
+            result += hobby + "\n";
         }
         System.out.println(result);
     }
@@ -99,9 +101,9 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * Se nota que es tres cuartos de lo mismo del anterior
      */
     public void formatearFoods() {
-        String result = "Mis comidas favoritas son: ";
+        String result = "Mis comidas favoritas son:\n";
         for (String food : foods) {
-            result += food + " \n";
+            result += food + "\n";
         }
         System.out.println(result);
     }
@@ -112,14 +114,34 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      * Más de lo mismo
      */
+    /*
     public void formatearFunFacts() {
-        String result = "Te cuento algunas cosas curiosas: ";
+        String result = "Te cuento algunas cosas curiosas:\n";
         for (String funFact : funFacts) {
-            result += funFact + " \n";
+            result += funFact + "\n";
         }
         System.out.println(result);
     }
+     */
 
+    /** Métod formatear randomFunFacts
+     * La variable formateado es para agregar la palabra Foods: al inicio y guardar el contenido del array en un solo String
+     * se usa un for each para recorrer el array completo
+     * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
+     * Más de lo mismo
+     */
+    public void randomFunFacts() {
+        String result = "Te cuento una cosa curiosa:\n";
+        int indice = new Random(). nextInt(funFacts.size());
+        result += funFacts.get(indice) + "\n";
+        System.out.println(result);
+    }
+
+    /*
+    public ArrayList<String> getFunFacts() {
+        return funFacts;
+    }
+     */
 }
 
 
