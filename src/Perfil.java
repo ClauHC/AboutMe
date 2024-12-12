@@ -15,6 +15,8 @@ Define la clase Perfil con las siguientes características:
 • funFacts: Colección de datos curiosos.
 */
 
+//todo limpiar codigo (quitar lo que no se usa), corregir los comentarios
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -66,9 +68,17 @@ La clase deberá tener métodos para acceder a estos atributos
 
     // Geetter method == read method. Cuando un métodoo permite obtener el valor de un atributo privado. Lee y devuelve (apunte de clase)
     // Modificados para que impriman por pantalla en lugar de hacer return
+
+
+    public String getName() {
+        return name;
+    }
+
+    /*
     public void printName() {
         System.out.println("Nombre: " + name + "\n");
     }
+     */
 
     public void printStory() {
         System.out.println("Sobre mi : " + story + "\n");
@@ -94,6 +104,7 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
         System.out.println(result);
     }
 
+    //todo poner los @param en los javadox
     /** Métod formatear foods
      * La variable formateado es para agregar la palabra Foods: al inicio y guardar el contenido del array en un solo String
      * se usa un for each para recorrer el array completo
@@ -130,18 +141,13 @@ Nada que si no pregunto que había que hacer aquí te hubiera entregado un churr
      * @return Retorna el contenido del array en un String ordenado y con espacios entre cada elemento
      * Más de lo mismo
      */
-    public void randomFunFacts() {
+    public String randomFunFacts() {
         String result = "Te cuento una cosa curiosa:\n";
         int indice = new Random(). nextInt(funFacts.size());
         result += funFacts.get(indice) + "\n";
-        System.out.println(result);
+        //System.out.println(result);
+        return result;
     }
-
-    /*
-    public ArrayList<String> getFunFacts() {
-        return funFacts;
-    }
-     */
 }
 
 

@@ -7,6 +7,8 @@
 
 
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class Main {
 
@@ -19,6 +21,7 @@ public class Main {
     //métodoo que llama al main. Aqui va lo que iría en el Main. Cambio necesario para poder usar programacion modular
     public void inicio(){
 
+        /*
         // Persona aburrida
         String name1 = "Lily";
 
@@ -30,7 +33,7 @@ public class Main {
         Perfil1.formatearFoods();
         //Perfil1.formatearFunFacts();
         Perfil1.randomFunFacts();
-
+        */
 
         // Información de mi perfil
         String name2 = "Claudia";
@@ -66,11 +69,54 @@ public class Main {
 
         // Objeto Perfil yo
         Perfil Perfil2 = new Perfil (name2, story, hobbies, foods, funFacts);
+        /*
         Perfil2.printName();
         Perfil2.printStory();
         Perfil2.formatearHobbies();
         Perfil2.formatearFoods();
         //Perfil2.formatearFunFacts();
         Perfil2.randomFunFacts();
+         */
+
+        //Menú de opciones
+        Scanner scanner = new Scanner(System.in);
+        int numMenu;
+
+        do {
+            // Mostrar el menú
+            System.out.println("\nMenu About Me " + Perfil2.getName());
+            System.out.println("[1] Story.");
+            System.out.println("[2] Favorites");
+            System.out.println("[3] Fun Fact");
+            System.out.println("[4] Salir");
+
+            // Verificar si la entrada es numérica
+            while (!scanner.hasNextInt()) {
+                System.out.println("Opción inválida. Por favor, ingresa un número.");
+                scanner.next();
+            }
+            numMenu = scanner.nextInt();
+
+            // Procesar la opción seleccionada
+            switch (numMenu) {
+                case 1:
+                    Perfil2.printStory();
+                    break;
+                case 2:
+                    Perfil2.formatearHobbies();
+                    Perfil2.formatearFoods();
+                    break;
+                case 3:
+                    System.out.println("Dato curioso: " + Perfil2.randomFunFacts());
+                    break;
+                case 4:
+                    System.out.println("¡Gracias por usar About Me! Hasta pronto.");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intenta de nuevo.");
+            }
+        } while (numMenu != 4);
+
+        scanner.close();
     }
 }
