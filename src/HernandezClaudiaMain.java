@@ -15,14 +15,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Main {
+public class HernandezClaudiaMain {
 
     /**Métod principal Main
      * se hace una llamada al nétod inicio para correr el programa
      * @param args
      */
     public static void main(String[] args) {
-        Main programa = new Main();
+        HernandezClaudiaMain programa = new HernandezClaudiaMain();
         programa.inicio();
     }
 
@@ -36,7 +36,7 @@ public class Main {
         String name1 = "Lily";
 
         // Objeto Perfil persona aburrida
-        Perfil perfil1 = new Perfil (name1);
+        HernandezClaudiaPerfil perfil1 = new HernandezClaudiaPerfil(name1);
 
 
         // Información de mi perfil
@@ -45,7 +45,7 @@ public class Main {
 
         String hobbie1 = "📚 Leer. Especialmente fantasía y ciencia ficción.";
         String hobbie2 = "💍 Hago joyería, he estudiado y trabajado la orfebrería, en mis ratos libres hago joyería cada vez que encuentro el momento";
-        String hobbie3 = "🎮 Jugar videojuegos, me gustan los RPG de plataforma abierta (unque casi nunca tengo tiempo 😭).";
+        String hobbie3 = "🎮 Jugar videojuegos, me gustan los RPG de plataforma abierta (aunque casi nunca tengo tiempo 😭).";
 
         ArrayList<String> hobbies = new ArrayList<>();
         hobbies.add(hobbie1);
@@ -71,7 +71,7 @@ public class Main {
         funFacts.add(funFact3);
 
         // Objeto Perfil yo
-        Perfil perfil2 = new Perfil (name2, story, hobbies, foods, funFacts);
+        HernandezClaudiaPerfil perfil2 = new HernandezClaudiaPerfil(name2, story, hobbies, foods, funFacts);
 
         /*
         //Llamar al menú del perfil1
@@ -85,16 +85,16 @@ public class Main {
     /**Metod del menú
      * Se pasa el menú a un métod para que sea más fácil llamarlo, usarlo y actualizarlo.
      * Antes había que entrarle directamente al menú el perfil que debía usar ahora se le entra en la llamada desde inicio el parámetro del perfil
-     * @param perfil indica que perfil queremos llamar
+     * @param hernandezClaudiaPerfil indica que perfil queremos llamar
      */
-    public void menuAboutMe (Perfil perfil) {
+    public void menuAboutMe (HernandezClaudiaPerfil hernandezClaudiaPerfil) {
         //Menú de opciones
         Scanner scanner = new Scanner(System.in);
         int numMenu;
 
         do {
             // Mostrar el menú
-            System.out.println("\nMenu About Me " + perfil.getName());
+            System.out.println("\nMenu About Me " + hernandezClaudiaPerfil.getName());
             System.out.println("[1] Story.");
             System.out.println("[2] Favorites");
             System.out.println("[3] Fun Fact");
@@ -110,14 +110,14 @@ public class Main {
             // Procesar la opción seleccionada
             switch (numMenu) {
                 case 1:
-                    perfil.printStory();
+                    hernandezClaudiaPerfil.printStory();
                     break;
                 case 2:
-                    perfil.formatearHobbies();
-                    perfil.formatearFoods();
+                    hernandezClaudiaPerfil.formatearHobbies();
+                    hernandezClaudiaPerfil.formatearFoods();
                     break;
                 case 3:
-                    System.out.println("Dato curioso: " + perfil.randomFunFacts());
+                    System.out.println("Dato curioso: " + hernandezClaudiaPerfil.randomFunFacts());
                     break;
                 case 4:
                     System.out.println("¡Gracias por usar About Me! Hasta pronto.");

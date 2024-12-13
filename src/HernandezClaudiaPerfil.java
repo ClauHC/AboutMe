@@ -20,7 +20,7 @@ import java.util.Random;
 
 
 // Clase Perfil
-public class Perfil {
+public class HernandezClaudiaPerfil {
 
     //Atributos (los atributos de una clase deben ser de prefrerencia privados)
     //Strings simples
@@ -34,7 +34,7 @@ public class Perfil {
 
     // Constructor de una persona aburrida.
     //Esto me lo estoy inventando aparte de la orden del ejercicio, pensé que puede haber gente que no tenga hobbies, ni comidas favoritas, ni nada que contar... o les de pereza
-    public Perfil(String name) {
+    public HernandezClaudiaPerfil(String name) {
         this.name = name;
 
         // Valores predeterminados
@@ -54,7 +54,7 @@ public class Perfil {
     }
 
     // Constructor
-    public Perfil(String name, String story, ArrayList<String> hobbies, ArrayList<String> foods, ArrayList<String> funFacts) {
+    public HernandezClaudiaPerfil(String name, String story, ArrayList<String> hobbies, ArrayList<String> foods, ArrayList<String> funFacts) {
         this.name = name;
         this.story = story;
         this.hobbies = hobbies;
